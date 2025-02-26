@@ -122,19 +122,51 @@ body {
   overflow: visible;
 }
 
+/* Hình ảnh trong .six */
 .six img {
   display: inline-block;
-  max-width: 25%;
+  max-width: 25%; /* Kích thước nhỏ trên laptop, sẽ điều chỉnh trên điện thoại */
   height: auto;
+  margin: 0 auto; /* Căn giữa theo chiều ngang */
 }
 
+/* Mũ trong .six */
 .six .hat {
   position: absolute;
-  width: 100px;
+  width: 100px; /* Kích thước mũ trên laptop */
   top: -140px;
-  left: 50%;
-  transform: rotate(-10deg);
-  transition: transform 0.3s ease;
+  left: 50%; /* Căn giữa theo chiều ngang */
+  transform: translateX(-50%) rotate(-10deg); /* Căn giữa chính xác và xoay */
+  transition: transform 0.3s ease; /* Hiệu ứng mượt khi thay đổi */
+}
+
+/* Media Queries cho màn hình nhỏ (điện thoại, dưới 768px) */
+@media screen and (max-width: 768px) {
+  .six img {
+    max-width: 50%; /* Tăng kích thước ảnh trên điện thoại */
+    margin-bottom: 20px; /* Thêm khoảng cách dưới ảnh để mũ không bị che */
+  }
+
+  .six .hat {
+    width: 60px; /* Giảm kích thước mũ trên điện thoại */
+    top: -80px; /* Giảm vị trí mũ để không tràn ra ngoài */
+    left: 50%; /* Giữ căn giữa */
+    transform: translateX(-50%) rotate(-10deg); /* Căn giữa chính xác */
+  }
+}
+
+/* Media Queries cho màn hình rất nhỏ (dưới 480px, điện thoại nhỏ) */
+@media screen and (max-width: 480px) {
+  .six img {
+    max-width: 70%; /* Tăng thêm kích thước ảnh trên điện thoại nhỏ */
+    margin-bottom: 15px; /* Giảm khoảng cách nếu cần */
+  }
+
+  .six .hat {
+    width: 50px; /* Giảm kích thước mũ thêm */
+    top: -60px; /* Điều chỉnh vị trí mũ */
+    transform: translateX(-50%) rotate(-10deg);
+  }
 }
 
 .seven {
