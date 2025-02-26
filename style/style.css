@@ -419,7 +419,7 @@ body.lights-on #overlay button {
 /* Tablet */
 @media screen and (max-width: 768px) {
   .ribbon.left img, .ribbon.right img {
-    height: 50vh; /* Giảm chiều cao trên tablet */
+    height: 40vh; /* Giảm chiều cao trên tablet */
     max-width: 80px; /* Giảm chiều rộng */
   }
 }
@@ -427,7 +427,7 @@ body.lights-on #overlay button {
 /* Điện thoại */
 @media screen and (max-width: 480px) {
   .ribbon.left img, .ribbon.right img {
-    height: 50vh; /* Giảm chiều cao hơn trên điện thoại */
+    height: 30vh; /* Giảm chiều cao hơn trên điện thoại */
     max-width: 50px; /* Giảm chiều rộng hơn */
   }
 }
